@@ -1,0 +1,9 @@
+version: '2'
+services:
+  fluentd:
+    build: ./fluentd
+    volumes:
+      - ./fluentd/conf:/fluentd/etc
+    ports:
+      - "5140:5140/udp"
+      - "6010:6010/tcp"
